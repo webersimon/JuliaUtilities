@@ -1,0 +1,4 @@
+name = "JuliaUtilities"
+uuid = "73e7b9c7-a81a-4ec9-a8ff-e65686bf2a57"
+authors = ["WeberSimon <simon.weber@york.ac.uk>"]
+version = "0.1.0"
