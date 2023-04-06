@@ -2,3 +2,7 @@ name = "JuliaUtilities"
 uuid = "73e7b9c7-a81a-4ec9-a8ff-e65686bf2a57"
 authors = ["WeberSimon <simon.weber@york.ac.uk>"]
 version = "0.1.0"
+
+[deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
