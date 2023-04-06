@@ -1,7 +1,7 @@
 module JuliaUtilities
 
-import Printf
-import DataFrames
+using Printf
+using DataFrames
 
 include("printlatex.jl")
 
