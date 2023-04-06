@@ -26,22 +26,22 @@ for k=eachindex(M)
   type_ij = typeof(M[k])
 
   if type_ij==String
-    M[k] = @sprintf "%s" M[k]
+    M[k] = Printf.@sprintf "%s" M[k]
   elseif type_ij==Int || type_ij==Int32 || type_ij==Int64
-    M[k] = @sprintf "%s" M[k]
+    M[k] = Printf.@sprintf "%s" M[k]
   elseif type_ij==Float32 || type_ij==Float64
     if digits==0
-      M[k] = @sprintf "%0.0f" M[k]
+      M[k] = Printf.@sprintf "%0.0f" M[k]
     elseif digits==1
-      M[k] = @sprintf "%0.1f" M[k]
+      M[k] = Printf.@sprintf "%0.1f" M[k]
     elseif digits==2      
-      M[k] = @sprintf "%0.2f" M[k]
+      M[k] = Printf.@sprintf "%0.2f" M[k]
     elseif digits==3
-      M[k] = @sprintf "%0.3f" M[k]
+      M[k] = Printf.@sprintf "%0.3f" M[k]
     elseif digits==4
-      M[k] = @sprintf "%0.4f" M[k]
+      M[k] = Printf.@sprintf "%0.4f" M[k]
     else
-      M[k] = @sprintf "%0.4f" M[k]
+      M[k] = Printf.@sprintf "%0.4f" M[k]
     end
   end
 end
