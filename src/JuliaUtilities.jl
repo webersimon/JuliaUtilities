@@ -6,5 +6,6 @@ using DataFrames
 
 # Files
 include("printlatex.jl")
+include("partition.jl")
 
 end # module JuliaUtilities
