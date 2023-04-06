@@ -18,6 +18,10 @@ D        = fill(" & ", I,J)
 D[:,end] = fill(" \\\\ \n", I)
 
 # Printing
+if digits>4
+  @warn "Warning: printlatex does not support more than four digits after the decimal point."
+end
+
 for k=eachindex(M)
   type_ij = typeof(M[k])
 
@@ -37,7 +41,6 @@ for k=eachindex(M)
     elseif digits==4
       M[k] = @sprintf "%0.4f" M[k]
     else
-      warning("Warning: printlatex does not support more than four digits after the decimal point.")
       M[k] = @sprintf "%0.4f" M[k]
     end
   end
