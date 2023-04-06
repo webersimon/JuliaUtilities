@@ -36,6 +36,9 @@ for k=eachindex(M)
       M[k] = @sprintf "%0.3f" M[k]
     elseif digits==4
       M[k] = @sprintf "%0.4f" M[k]
+    else
+      warning("Warning: printlatex does not support more than four digits after the decimal point.")
+      M[k] = @sprintf "%0.4f" M[k]
     end
   end
 end
