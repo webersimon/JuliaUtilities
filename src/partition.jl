@@ -9,15 +9,13 @@ function partition(set::Vector, K)
     end
 
     P    = Vector{Vector}(undef,K)
-    step = Int64(ceil(length(set)/K))
+    step = Int64(floor(length(set)/K))
 
     starts = collect(1:step:length(set))
-    for k=1:K
-        subset  = starts[k] .+ collect(0:(step-1))
-        subset  = subset[subset .<= length(set)]
-        P[k]    = set[subset]
+    for k=1:(K-1)
+        P[k]  = starts[k] .+ collect(0:(step-1))
     end
+    P[K] = collect((1 + (K-1)*step):length(set))
 
     return P
 end
-
