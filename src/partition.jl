@@ -10,14 +10,14 @@ function partition(set::Vector, K)
 
     P    = Vector{Vector}(undef,K)
     if K==1
-        P[1] = collect(1:length(set))
+        P[1] = collect(set)
     else
         step = Int64(floor(length(set)/K))
         starts = collect(1:step:length(set))
         for k=1:(K-1)
-            P[k]  = starts[k] .+ collect(0:(step-1))
+            P[k]  = set[starts[k] .+ collect(0:(step-1))]
         end
-        P[K] = collect((1 + (K-1)*step):length(set))
+        P[K] = set[collect((1 + (K-1)*step):length(set))]
     end
     
     return P
